@@ -1,8 +1,9 @@
 import pytest
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def samplefixure():
 	print("sample fixture")
+	#reading file
 
 def test_samplefixture(samplefixure):
 	print("testing sample fixure")
